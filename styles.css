@@ -65,24 +65,22 @@ p {
 }
 
 .site-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.35rem 1.5rem;
   padding-block: 1.125rem;
   border-bottom: 1px solid var(--rule);
 }
 
-.site-name {
-  font-size: clamp(1.25rem, 3vw, 1.5rem);
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.025em;
-  overflow-wrap: anywhere;
+.top-bar {
+  display: grid;
+  grid-template-columns: fit-content(35%) minmax(0, 1fr);
+  align-items: baseline;
+  column-gap: clamp(0.75rem, 3vw, 1.5rem);
+  font-size: 0.875rem;
+  font-weight: 600;
 }
 
-.site-header nav {
-  margin-inline-start: auto;
+.site-name {
+  font: inherit;
+  overflow-wrap: anywhere;
 }
 
 .section-nav, .link-list {
@@ -95,18 +93,20 @@ p {
 .section-nav {
   justify-content: flex-end;
   gap: 0.25rem clamp(0.9rem, 3vw, 1.75rem);
-  font-size: 0.875rem;
-  font-weight: 600;
 }
 
-.section-nav a {
+.top-bar a {
   display: inline-block;
   padding-block: 0.3rem;
   color: var(--muted);
   text-decoration: none;
 }
 
-.section-nav a:hover, .section-nav a:focus-visible {
+.site-name a {
+  color: var(--text);
+}
+
+.top-bar a:hover, .top-bar a:focus-visible {
   color: var(--accent);
   text-decoration: underline;
 }
@@ -225,10 +225,6 @@ h3 {
 @media (max-width: 36rem) {
   .page-width {
     width: min(100% - 2rem, 49rem);
-  }
-
-  .site-header nav {
-    flex-basis: 100%;
   }
 
   .section-nav {
