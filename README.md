@@ -9,6 +9,8 @@ A single-page portfolio with sections for a bio, experience, publications, proje
 - To add a thumbnail, place the image in an `images/` folder and insert `<img class="work-thumbnail" src="images/project.jpg" alt="Describe what the image shows" loading="lazy">` before the text `div` inside a work entry. Use descriptive alternative text and keep image paths relative.
 - Edit the custom properties at the top of `styles.css` to change the palette or fonts.
 
+The type stack uses installed Avenir Next fonts when available and includes a local copy of Manrope for Latin text. [Manrope license](fonts/manrope-OFL.txt)
+
 ## Preview locally
 
 From the repository root, run:
